@@ -3,7 +3,7 @@ var poetry = ["| i wanna hold the hand inside you", "| i wanna take the breath t
 var index = 0;
 
 function setup() {
-  createCanvas(800, 400);
+  createCanvas(960, 600);
 }
 
 function draw() {
