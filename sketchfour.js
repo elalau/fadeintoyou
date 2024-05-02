@@ -25,4 +25,7 @@ function draw() {
   }
   image(eyeball, 350, 100, 600, 600);
   
+  fill('gray');
+  text('drag your mouse', 950, 760); 
+
 }
