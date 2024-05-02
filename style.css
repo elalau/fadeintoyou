@@ -12,3 +12,8 @@ canvas {
   margin:auto; 
   margin-top: 5%; 
 }
+
+p {
+  position: absolute;
+  
+}
