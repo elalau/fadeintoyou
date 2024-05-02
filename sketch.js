@@ -1,24 +1,36 @@
-var poetry = ["| i wanna hold the hand inside you", "| i wanna take the breath that's true", "| i look to you and i see nothing", "| i look to you to see the truth", "| you live your life", "| you go in shadows", "| you'll come apart", "| and you'll go blind", "| some kind of night into your darkness", "| colored your eyes","| with what's not there" , "| fade into you", "| strange you never knew."]; 
+var img1;
+var img3;
+var img4;
+var img5;
 
-var index = 0;
+function preload () {
+img1 = loadImage('baby.png');
+img3 = loadImage('halfofmeres.png');
+img4 = loadImage('textkatakana.png');
+img5 = loadImage('text.png'); 
+}
+
 
 function setup() {
-  createCanvas(960, 600);
+  createCanvas(1200, 800);
 }
 
 function draw() {
-  background('black');
+  background(255);
+   
+  if (mouseY > height/2) {
+    image(img1, 100, 100);
+  }
   
-  textSize(24);
-  fill('white');
-  text(poetry[index], width/3, height/2);
+  else if(mouseX > width/2) {
+    image(img5, 250, 350);
+  }
   
-} 
-
-function mousePressed() {
-  index = index + 1; 
+  else if(mouseX > width/3) {
+    image(img4, 350, 100);
+  }
   
-  if (index == poetry.length) {
-    index = 0;
+  else { 
+   image(img3, 100, 0);
   }
 }
