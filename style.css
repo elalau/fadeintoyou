@@ -1,14 +1,11 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 header { 
   font-size: 30px;
   display: flex;
   align-items:center;
-  justify-content:space-between;
-  margin: 0 30rem;  
+  justify-content:flex-end;
+  flex-wrap: wrap;
+  margin-right: .5em;
+  gap: 1em;
 }
 
 nav {
@@ -18,18 +15,16 @@ nav {
 }
 
 body {
-  background-color: darkred;
+  background-color: whitesmoke;
 }
 
-canvas {
-  display: block;
-  margin:auto; 
-  margin-top: 5%; 
+main {
+  display: flex;
+  justify-content: center;
 }
 
 footer {
-  margin:auto;
   display: flex;
-  align-items:center;
-  justify-content:space-between; 
+  justify-content: center;
+  gap: 5%;
 } 
