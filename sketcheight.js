@@ -24,8 +24,9 @@ function draw() {
   let iy = height - mouseY; // Inverse Y
 
 
-  image(img1, x, height/6, y , y);
   image(img2, ix, height/6, iy, iy);
+  image(img1, x, height/6, y , y);
+
   
   for (var i = 0; i < stars.length; i++) {
 		stars[i].draw();
