@@ -28,3 +28,8 @@ footer {
   justify-content: center;
   gap: 5%;
 } 
+
+#ascii {
+  width: 1200px;
+  height: 800px;
+}
