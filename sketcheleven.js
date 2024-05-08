@@ -1,35 +1,47 @@
-const density = "Ñ@#W$9876543210?!abc;:+=-,._          ";
+let graphic
+let font 
 
-//const density = '       .:-i|=+%O#@'
-//const density = '        .:░▒▓█';
+function preload() {
+  font = loadFont("SpaceGrotesk-Medium.ttf");
+}
 
-let video;
-let asciiDiv;
+function setup () {
+  createCanvas(1200,800);
+  
+  graphic = createGraphics(1200, 800);
+  
+  graphic.textFont(font);
+  graphic.fill("white");
+  graphic.textSize(80); 
+  graphic.textAlign(CENTER,CENTER);
+  graphic.text("strange you never knew.", 600, 700);
+}
 
-        function setup() {
-          asciiDiv = createDiv();
-          noCanvas();
-          video = createCapture(VIDEO);
-          video.size(60, 48);
-        }
-
-        function draw() {
-          video.loadPixels();
-          let asciiImage = "";
-          for (let j = 0; j < video.height; j++) {
-            for (let i = 0; i < video.width; i++) {
-              const pixelIndex = (i + j * video.width) * 4;
-              const r = video.pixels[pixelIndex + 0];
-              const g = video.pixels[pixelIndex + 1];
-              const b = video.pixels[pixelIndex + 2];
-              const avg = (r + g + b) / 3;
-              const len = density.length;
-              const charIndex = floor(map(avg, 0, 255, 0, len));
-              const c = density.charAt(charIndex);
-              if (c == " ") asciiImage += "&nbsp;";
-              else asciiImage += c;
-            }
-            asciiImage += '<br/>';
-          }
-          asciiDiv.html(asciiImage);
-        }
+function draw () {
+  background("black");
+ 
+  const tileSize = 200;
+  
+  for (let y = 0; y < 12; y = y + 1) {
+    
+    const distortion = sin(frameCount * 0.05 + y) * 50; 
+    //let position = mouseX / windowHeight;
+  
+    
+    const sx = 0; 
+    const sy = y * tileSize + mouseY; 
+    const sw = 1200; 
+    const sh = tileSize * distortion + (800 - tileSize) * (1 - distortion); 
+    
+    const dx = 0; 
+    const dy = y * tileSize; 
+    const dw = 1200; 
+    const dh = tileSize; 
+    
+    image(graphic, dx, dy, dw, dh, sx, sy, sw, sh)
+  }
+  
+  
+  //image(graphic, 0, 0, 1200, frameCount, 0, 0, 1200, 800); 
+  
+}
