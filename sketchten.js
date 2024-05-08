@@ -1,6 +1,6 @@
 const numStars = 500;
 let stars = [];
-var poetry = ["fade into me", "fade into you", "تتلاشى فيك", "fade into you", "あなたの中に消えていきます", "మీలో మసకబారుతుంది", "fade into me", "mae aku ia oe", "fade into you", "너에게로 사라져라", "fade into you", "раствориться в тебе","fade into you", "se fondre en toi", "fade into you"];
+var poetry = ["click into me", "fade into me", "fade into you", "تتلاشى فيك", "あなたの中に消えていきます", "మీలో మసకబారుతుంది", "fade into me", "mae aku ia oe", "fade into you", "너에게로 사라져라", "fade into you", "раствориться в тебе","fade into you", "se fondre en toi", "fade into you"];
 var index = 0;
 
 function setup() {
